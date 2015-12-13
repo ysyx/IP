@@ -13,10 +13,6 @@
                     <input type="text" class="form-control" name="venue_description"  placeholder="Venue Description">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputFile">Directory</label>
-                    <input id="dir" name="dir" type="text" value="" /> <br />
-                </div>
-                <div class="form-group">
                     <label for="venu_size">Venue Size</label>
                     <input type="text" class="form-control" name="venue_size" placeholder="Venue Size">
                 </div>
@@ -24,7 +20,7 @@
                     <label for="venu_capacity">Venue Capacity</label>
                     <input type="text" class="form-control" name="venue_capacity" placeholder="Venue Capacity">
                 </div>
-                <input id="uploadButton" name="uploadButton" type="submit" value="Upload" />
+                <input id="uploadButton" name="uploadButton" type="submit" value="Add" />
             </form>
         </div>
     </div>
