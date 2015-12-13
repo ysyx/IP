@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>AccountController</servlet-name>
+        <servlet-class>controller.AccountController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HomeController</servlet-name>
+        <servlet-class>controller.HomeController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VenueController</servlet-name>
+        <servlet-class>controller.VenueController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeController</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AccountController</servlet-name>
+        <url-pattern>/login</url-pattern>
+        <url-pattern>/account</url-pattern>
+        <url-pattern>/account/login</url-pattern>
+        <url-pattern>/account/verifylogin</url-pattern>
+        <url-pattern>/account/error</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VenueController</servlet-name>
+        <url-pattern>/venue/addvenue</url-pattern>
+        <url-pattern>/venue/deleteimage</url-pattern>
+        <url-pattern>/venue/deletevenue</url-pattern>
+        <url-pattern>/venue/addimage</url-pattern>
+        <url-pattern>/venue/editvenue</url-pattern>
+        <url-pattern>/venue/savevenue</url-pattern>
+        <url-pattern>/venue/savededit</url-pattern>
+        <url-pattern>/venue/savevenuee</url-pattern>
+        <url-pattern>/venue/editimage</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <jsp-config>
+        <jsp-property-group>
+            <description>header and footer template</description>
+            <display-name>template</display-name>
+            <url-pattern>/WEB-INF/share/*</url-pattern>
+            <url-pattern>/index.jsp</url-pattern>
+            <url-pattern>/WEB-INF/admin/*</url-pattern>
+            <include-prelude>/WEB-INF/templates/header.jspf</include-prelude>
+            <include-coda>/WEB-INF/templates/footer.jspf</include-coda>
+        </jsp-property-group>
+    </jsp-config>
+</web-app>
