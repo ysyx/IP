@@ -11,6 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <title>JSP Page</title>
     </head>
     <body>
@@ -25,17 +26,43 @@
                 
                 PreparedStatement stmt = conn.prepareStatement(queryRead);
                 ResultSet rs = stmt.executeQuery();
-                
-                while(rs.next()){
+                %>
+                <div class="col-md-offset-3 col-md-6">
+                    <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Venue Name</th>
+                                    <th>Reservation Status</th>
+                                </tr>
+                            </thead>
+
+                    <%
+                    while(rs.next()){
                     %>
-                    <ul>
-                        <li><%out.println(rs.getString(2));%></li>
-                    </ul>
-        <%
+                            <tbody>
+                                <tr>
+                                    <td><% out.println(rs.getString(1)); %></td>
+                                    <td><% out.println(rs.getString(2)); %></td>
+                                    <td>
+                                        <% 
+                                            if(rs.getString(3).equals("0")){
+                                                out.println("Available");
+                                            }else{
+                                                out.println("Not Available");
+                                            }
+                                        %>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+            <%
+                    }
+                }catch(Exception ex){
+                    out.println(ex.getMessage());
                 }
-            }catch(Exception ex){
-                out.println(ex.getMessage());
-            }
-         %>
+             %>
+             </table>
+         </div>
     </body>
 </html>
