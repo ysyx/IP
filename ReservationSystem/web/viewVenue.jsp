@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="asset/bootstrap-3.3.5-dist/css/bootstrap.min.css">
         <title>JSP Page</title>
     </head>
     <body>
