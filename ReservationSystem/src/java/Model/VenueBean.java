@@ -153,4 +153,13 @@ public class VenueBean {
             db.close();
         return venuebean;
     }
+    
+    public void merge_id(){
+        DB db= new DB();
+        if(db.connect()){
+                db.query("SELECT * FROM venue WHERE venue_name='"+venue_name+"'");
+                pk_id = db.getDataAt(0, "pk_id");
+
+            }
+    }
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<script src="oUTMr/asset/jqueryvalidation/dist/jquery.validate.js"></script>
+<script src="ReservationSystem/asset/jqueryvalidation/dist/jquery.validate.js"></script>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login Error Page</title>
@@ -18,7 +18,7 @@
             <div style="padding-top:30px" class="panel-body" >
                 <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
 
-                <form id="myForm" class="form-horizontal" role="form" method="post" action="/oUTMr/account/verifylogin">
+                <form id="myForm" class="form-horizontal" role="form" method="post" action="/ReservationSystem/account/verifylogin">
 
                 <div style="margin-bottom: 25px" class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>

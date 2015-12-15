@@ -17,7 +17,7 @@
             <td></td>
             <td></td>
             <td>
-                <form  action="oUTMr/venue/addvenue" method="get">
+                <form  action="ReservationSystem/venue/addvenue" method="get">
                     <button  type="submit" class="btn btn-warning">
                         <span class="glyphicon glyphicon-plus"></span> 
                     </button>
@@ -41,7 +41,7 @@
                 <td><%out.println(db.getDataAt(count, "venue_size"));%></td>
                 <td><%out.println(db.getDataAt(count, "venue_capacity"));%></td>
                 <td>            
-                    <form action="oUTMr/venue/editvenue" method="get">
+                    <form action="ReservationSystem/venue/editvenue" method="get">
                         <input type="hidden" value="<% out.println(db.getDataAt(count, "pk_id"));%>" name="venue_id">
                         <button  type="submit" class="btn btn-warning">
                             <span class="glyphicon glyphicon-pencil"></span> 
@@ -49,7 +49,7 @@
                     </form> 
                 </td>
                 <td>            
-                    <form action="oUTMr/venue/editimage" method="get">
+                    <form action="ReservationSystem/venue/editimage" method="get">
                         <input type="hidden" value="<% out.println(db.getDataAt(count, "pk_id"));%>" name="venue_id">
                         <button  type="submit" class="btn btn-warning">
                             <span class="glyphicon glyphicon-hdd"></span> 
@@ -57,7 +57,7 @@
                     </form> 
                 </td>
                 <td>
-                    <form action="oUTMr/venue/deletevenue" method="get">
+                    <form action="ReservationSystem/venue/deletevenue" method="get">
                         <input type="hidden" value="<% out.println(db.getDataAt(count, "pk_id"));%>" name="venue_id">
                         <button  type="submit" class="btn btn-warning">
                             <span class="glyphicon glyphicon-trash"></span> 

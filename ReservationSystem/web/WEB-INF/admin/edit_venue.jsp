@@ -1,4 +1,4 @@
-<script src="oUTMr/asset/jqueryvalidation/dist/jquery.validate.js"></script>
+<script src="ReservationSystem/asset/jqueryvalidation/dist/jquery.validate.js"></script>
 <%@page import="Model.VenueBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean id="venue_bean" class="Model.VenueBean" scope="request"/>  
@@ -6,7 +6,7 @@
 <body>
     <div class="row">
         <div class="col-md-offset-2 col-md-8">
-            <form action="oUTMr/venue/savededit" method="post" id="myForm">
+            <form action="ReservationSystem/venue/savededit" method="post" id="myForm">
                 <input type="hidden" name="venue_id" value="<jsp:getProperty name="venue_bean" property="pk_id"/>">
                 <div class="form-group">
                     <label for="venu_name">Venue Name</label>

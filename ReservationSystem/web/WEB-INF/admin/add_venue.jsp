@@ -1,9 +1,9 @@
-<script src="oUTMr/asset/jqueryvalidation/dist/jquery.validate.js"></script>
+<script src="ReservationSystem/asset/jqueryvalidation/dist/jquery.validate.js"></script>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <body>
     <div class="row">
         <div class="col-md-offset-2 col-md-8">
-            <form id="uploadForm" enctype="multipart/form-data" name="form" method="post" action="oUTMr/venue/savevenue" target="target_upload"> 
+            <form id="uploadForm" enctype="multipart/form-data" name="form" method="post" action="ReservationSystem/venue/savevenue" > 
                 <div class="form-group">
                     <label for="ovenu_name">Venue Name</label>
                     <input type="text" class="form-control" name="venue_name"  placeholder="Venue Name">

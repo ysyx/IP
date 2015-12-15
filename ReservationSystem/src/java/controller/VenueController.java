@@ -96,6 +96,25 @@ public class VenueController extends HttpServlet {
             venue_bean.setVenue_capacity(request.getParameter("venue_capacity"));
             venue_bean.add_venue();
             
+            venue_bean.merge_id();
+  response.getWriter().println(venue_bean.getPk_id());
+            String dir = venue_bean.getPk_id();
+                    dir = dir.replaceAll("\\s", "");
+
+                    String fileUploadPath = getServletContext().getRealPath("/")+"../../web/asset/images/"  + dir + "/";
+                    File fileUploadDir = new File(fileUploadPath);
+                    if(!fileUploadDir.exists()) {
+                        fileUploadDir.mkdirs();
+                    }
+
+                    response.getWriter().println(venue_bean.getPk_id());
+                    
+                    
+                    venue_bean.setVenue_image("asset/images/"+dir+"/");
+                    venue_bean.save_edited2();
+                    
+                    
+            
             response.sendRedirect("../home");
         }else if(userPath.equals("/venue/savededit")){
            VenueBean venue_bean = new VenueBean();
